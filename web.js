@@ -4,7 +4,7 @@ var app = express.createServer(express.logger());
 
 var indexBuffer = fs.readFileSync('index.html');
 
-var index = buf.toString(indexBuffer);
+var index = indexBuffer.toString('utf-8');
 
 app.get('/', function(request, response) {
   response.send(index);
