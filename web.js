@@ -4,10 +4,10 @@ var app = express.createServer(express.logger());
 
 var indexBuffer = fs.readFileSync('index.html');
 
-var index = indexBuffer.toString('utf-8');
+//var index = indexBuffer.toString('utf-8');
 
 app.get('/', function(request, response) {
-  response.send(index);
+  response.send(indexBuffer.toString('utf-8'));
 });
 
 var port = process.env.PORT || 5000;
